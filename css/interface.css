@@ -1,15 +1,20 @@
 :root{
-    --cp1: 219deg 24% 37%;--color-primary-1: hsl(var(
-    --cp1));
+    --cp1: 219deg 24% 37%;
+    --color-primary-1: hsl(var(--cp1));
     --color-primary-2:#4a5977;
     --color-text-1:white;
     --color-text-2:#704040;
-    --ct3: 220deg 25% 50%;--color-text-3: hsl(var(
-    --ct3));
+    --ct3: 220deg 25% 50%;
+    --color-text-3: hsl(var(--ct3));
     --height-footer: 41px;
 --time: 0.5s;
 --ease: cubic-bezier(0.33, 1, 0.68, 1);
 }
+*, *::before, *::after {
+    transition-duration: var(--time);
+    transition-timing-function: var(--ease);
+}
+
 hidden {
     display: none;
 }
@@ -29,34 +34,48 @@ body {
 
 
 header {
-    font-size: 0.7em;
+    font-size: 0.55em;
     position: fixed;
     inset: auto 0;
     z-index: 999;
     padding: 0.5rem 0;
+    --color-hover: var(
+    --cp1);
+    --box-blur: 0.6em;
+    --box-alpha:1;
+    background-color: transparent;
+}
+
+header a[href="#s1"] img:nth-child(1) {
+    border-radius: 100%;
+    margin-right:.5em;
+}
+
+header a[href="#s1"]:hover img:nth-child(1) {
+    /* border:thin red solid; */
+    box-shadow: 0 0 var(--box-blur) hsl(var(--color-hover) / var(--box-alpha));
 }
 
 header nav ul a {
+/*     --a: 0; */
+/*     --b1: 0px; */
+/*     --b2: 0px; */
     color: inherit;
     font-style: italic;
     text-decoration: none;
     text-transform: uppercase;
-    /* border: red thin solid; */
     padding: 1em;
     background-color: transparent;
-    transition-property: background-color;
+    transition-duration: calc(var(--time)*2);
 }
 
 header nav ul a:hover {
-    background-color: hsla(var(--cp1)/ 0.5);
-}
+--a: var(--box-alpha);--b1: 2em;--b2: var(--box-blur);box-shadow: 0 0 var(--b1) hsl(var(--color-hover) / var(--a)) inset, 0 0 var(--b2) hsl(var(--color-hover) / var(--a));}
 
 header nav ul a span {
     --border-size: .1em;
     counter-increment: section;
---color-hover: var(
-    --color-text-2);
-    padding: 0.4em 0.5em;
+    padding: 0.2em 0.5em;
     background-image: linear-gradient(90deg,currentColor 33%, transparent 33%, transparent 66%, currentColor 66% );
     background-size: 310% var(--border-size);
     background-position: 0 100%;
@@ -79,6 +98,10 @@ header li {
 
 header img {
     height: 3em;
+}
+
+header #logo img:nth-child(1) {
+    border-radius: 100%;
 }
 nav {
     display: flex;
@@ -124,8 +147,8 @@ section#s1::before{
     background-image: url(../images/title2.png);
     /* opacity:0; */
     /* animation-delay: var(--time); */
-    animation-duration: calc(var(--time)*3);
-    animation-direction:normal;
+    /* animation-duration: calc(var(--time)*3); */
+    --time: 3s;
     animation-name: fadeIn;
 }
 section#s1::after {
