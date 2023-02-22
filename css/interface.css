@@ -1,8 +1,180 @@
 :root{
-    --color-primary-1:#485876;
+    --cp1: 219deg 24% 37%;--color-primary-1: hsl(var(
+    --cp1));
     --color-primary-2:#4a5977;
     --color-text-1:white;
     --color-text-2:#704040;
-    --color-text-3:#3b4b6c;
-
+    --ct3: 220deg 25% 50%;--color-text-3: hsl(var(
+    --ct3));
+    --height-footer: 41px;
+--time: 0.5s;
+--ease: cubic-bezier(0.33, 1, 0.68, 1);
 }
+hidden {
+    display: none;
+}
+
+body {
+    background-color: var(--color-primary-2);
+    font-family: sans-serif;
+    /* background-image: url(../images/hero\(roto\).png); */
+    position: relative;
+    min-width: 500px;
+    /* width: 960px; */
+    /* width: 600px; */
+    /* margin: auto; */
+    /* padding: 0 20vw 0; */
+    counter-reset: section;
+}
+
+
+header {
+    font-size: 0.7em;
+    position: fixed;
+    inset: auto 0;
+    z-index: 999;
+    padding: 0.5rem 0;
+}
+
+header nav ul a {
+    color: inherit;
+    font-style: italic;
+    text-decoration: none;
+    text-transform: uppercase;
+    /* border: red thin solid; */
+    padding: 1em;
+    background-color: transparent;
+    transition-property: background-color;
+}
+
+header nav ul a:hover {
+    background-color: hsla(var(--cp1)/ 0.5);
+}
+
+header nav ul a span {
+    --border-size: .1em;
+    counter-increment: section;
+--color-hover: var(
+    --color-text-2);
+    padding: 0.4em 0.5em;
+    background-image: linear-gradient(90deg,currentColor 33%, transparent 33%, transparent 66%, currentColor 66% );
+    background-size: 310% var(--border-size);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition-property: background-position;
+}
+
+header nav ul a:hover span {
+    background-position: 100% 100%;
+}
+
+header nav ul a span::before {
+    content: counters(section, ".", decimal-leading-zero) ". ";
+}
+
+header nav ul {display: flex;gap: max((2vw+.2em), 1em);}
+header li {
+    display: inline;
+}
+
+header img {
+    height: 3em;
+}
+nav {
+    display: flex;
+    place-content: space-between;
+    place-items: center;
+    margin-inline: 1em max(0px, min(1em, calc((100vw - .5em - 100%) * 9999)));
+    color: var(--color-text-1);
+}
+main {
+    /* height: 1530px; */
+    height: calc(100vh - var(--height-footer));
+    /* width: 80vw; */
+    margin: auto;
+}
+section {
+    position: relative;
+    height: 100%;
+}
+
+section:nth-child(n+2) {
+    display: none;
+}
+
+section#s1,
+section#s1::before ,
+section#s1::after {
+    width: 100vw;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -11;
+    background-image: url(../images/hero.png);
+    background-position: 42% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section#s1::before ,
+section#s1::after {
+    content: "";
+}
+section#s1::before{
+    background-image: url(../images/title2.png);
+    /* opacity:0; */
+    /* animation-delay: var(--time); */
+    animation-duration: calc(var(--time)*3);
+    animation-direction:normal;
+    animation-name: fadeIn;
+}
+section#s1::after {
+    background-image: url(../images/footerGradient.png);
+}
+
+@keyframes fadeIn{
+    0% {
+        opacity:0;
+    }
+    33% {
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+
+footer {
+    position: fixed;
+    position: relative;
+    /* bottom: 0; */
+    font-size: 0.7em;
+    height: var(--height-footer, auto);
+    background-color: var(--color-primary-1);
+}
+footer nav{
+    padding-block: 0.6em;
+}
+footer nav::after {
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--color-primary-1);
+    mix-blend-mode: multiply;
+}
+
+footer h3 {
+    font-size: 0.9em;
+    font-style: italic;
+    text-transform: uppercase;
+    color: var(--color-text-3);
+}
+
+footer img {
+    height: 2em;
+}
+
+
