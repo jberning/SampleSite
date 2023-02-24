@@ -10,7 +10,7 @@
     <title>Los Angeles Mountains</title>
 </head>
 <body>
-    <header>
+    <header class="bar top">
         <h1 id="title" hidden>Los Angeles Mountains</h1>
         <nav>
             <a href="#s1">
@@ -27,14 +27,91 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="s1">
+    <main class="app">
+        <section id="s1" class="page" aria-hidden="true">
             <div id="snow" aria-hidden="true"></div>
         </section>
-        <section id="s2"></section>
-        <section id="s3"></section>
+        <section id="s2" class="page">
+            <header>
+                <h2><span>History</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est tempore voluptates dignissimos corporis nemo architecto delectus vero voluptatum! Asperiores commodi dolor voluptates? Accusamus beatae cum pariatur aliquid non accusantium aspernatur?</p>
+            </header>
+        </section>
+        <section id="s3" class="page">
+            <header>
+                <h2><span>Climb</span></h2>
+                <p>Unde non beatae neque eaque magni iure delectus minima cumque optio numquam commodi voluptate cupiditate, facere ut laboriosam fuga dolorum ducimus!</p>
+                
+            </header>
+            <div class="cont">
+                <details class="tab1" open>
+                    <summary>Mountain 1</summary>
+                    <div>
+                        <h3>Schedule</h3>
+                        <table>
+                            <tr>
+                                <td><time datetime="2016-11-25">25 Nov 2016</time></td>
+                                <td>Vestibulum viverra</td>
+                            </tr>
+                            <tr>
+                                <td><time datetime="2016-11-28">28 Nov 2016</time></td>
+                                <td>Vestibulum viverra</td>
+                            </tr>
+                            <tr aria-hidden="true">
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><time datetime="2016-12-25">25 Dec 2016</time></td>
+                                <td>Vestibulum viverra</td>
+                            </tr>
+                            <tr aria-hidden="true">
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><time datetime="2017-1-7">07 Jan 2017</time></td>
+                                <td>Vestibulum viverra</td>
+                            </tr>
+                        </table>
+                    </div>
+                </details>
+                <details class="tab2">
+                    <summary>Mountain 2</summary>
+                    <div>
+                        <h3>Schedule</h3>
+                        <table>
+                            <tr>
+                                <td><time datetime="2016-11-17">17 Nov 2016</time></td>
+                                <td>Vestibulum viverra</td>
+                            </tr>
+                            <tr aria-hidden="true">
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><time datetime="2016-12-13">13 Dec 2016</time></td>
+                                <td>Vestibulum viverra</td>
+                            </tr>
+                            <tr>
+                                <td><time datetime="2016-12-28">28 Dec 2016</time></td>
+                                <td>Vestibulum viverra</td>
+                            </tr>
+                            <tr aria-hidden="true">
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><time datetime="2017-2-9">09 Feb 2017</time></td>
+                                <td>Vestibulum viverra</td>
+                            </tr>
+                        </table>
+                    </div>
+                </details>
+            </div>
+        </section>
     </main>
-    <footer>
+    <footer class="bar bottom">
         <nav>
             <a href="#s1">
                 <img src="images/logoFooter.png" alt="logo, Los Angeles Mountains">
