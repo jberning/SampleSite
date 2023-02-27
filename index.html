@@ -44,7 +44,76 @@
                 
             </header>
             <div class="cont">
-                <details class="tab1" open>
+                <ul class="tabs" role="tablist">
+                    <li>
+                        <label for="tab-1" role="tab" aria-selected="true" aria-controls="panel-1" tabindex="0" id="tab-label-1">Mountain 1</label>
+                        <input type="radio" name="tabs" id="tab-1" checked="checked" />
+                        <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="tab-label-1"aria-hidden="false">
+                            <h3>Schedule</h3>
+                            <table>
+                                <tr>
+                                    <td><time datetime="2016-11-25">25 Nov 2016</time></td>
+                                    <td>Vestibulum viverra</td>
+                                </tr>
+                                <tr>
+                                    <td><time datetime="2016-11-28">28 Nov 2016</time></td>
+                                    <td>Vestibulum viverra</td>
+                                </tr>
+                                <tr aria-hidden="true">
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td><time datetime="2016-12-25">25 Dec 2016</time></td>
+                                    <td>Vestibulum viverra</td>
+                                </tr>
+                                <tr aria-hidden="true">
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td><time datetime="2017-1-7">07 Jan 2017</time></td>
+                                    <td>Vestibulum viverra</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="tab-2" role="tab" aria-selected="false" aria-controls="panel-2" tabindex="1" id="tab-label-2">Mountain 2</label>
+                        <input type="radio" name="tabs" id="tab-2"/>
+                        <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="tab-label-2" aria-hidden="false">
+                            <h3>Schedule</h3>
+                            <table>
+                                <tr>
+                                    <td><time datetime="2016-11-17">17 Nov 2016</time></td>
+                                    <td>Vestibulum viverra</td>
+                                </tr>
+                                <tr aria-hidden="true">
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td><time datetime="2016-12-13">13 Dec 2016</time></td>
+                                    <td>Vestibulum viverra</td>
+                                </tr>
+                                <tr>
+                                    <td><time datetime="2016-12-28">28 Dec 2016</time></td>
+                                    <td>Vestibulum viverra</td>
+                                </tr>
+                                <tr aria-hidden="true">
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td><time datetime="2017-2-9">09 Feb 2017</time></td>
+                                    <td>Vestibulum viverra</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+            </div>
+            <!-- <div class="cont"> 
+                <details class="tab1">
                     <summary>Mountain 1</summary>
                     <div>
                         <h3>Schedule</h3>
@@ -108,7 +177,7 @@
                         </table>
                     </div>
                 </details>
-            </div>
+            </div> -->
         </section>
     </main>
     <footer class="bar bottom">
@@ -116,7 +185,7 @@
             <a href="#s1">
                 <img src="images/logoFooter.png" alt="logo, Los Angeles Mountains">
             </a>
-            <h3>Copyright 2016. All Rights Reserved</h3>
+            <small class="copyright">Copyright 2016. All Rights Reserved</small>
         </nav>
     </footer>
     
