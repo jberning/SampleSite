@@ -6,38 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/interface.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <script src="./js/scripts.js" defer></script>
     <title>Los Angeles Mountains</title>
 </head>
 <body>
     <header class="bar top">
         <h1 id="title" hidden>Los Angeles Mountains</h1>
         <nav>
-            <a href="#s1">
+            
+            <a target="_self" href="#s1" alt="Home Slide">
+                <span hidden>Home</span>
                 <img src="images/logo2.png" alt="logo">
                 <img src="images/titleSmall.png" alt="Los Angeles Mountains">
             </a>
             <ul>
                 <li>
-                    <a href="#s2"><span>History</span></a>
+                    <a target="_self" href="#s2" alt="History Slide"><span>History</span></a>
                 </li>
                 <li>
-                    <a href="#s3"><span>Team</span></a>
+                    <a target="_self" href="#s3" alt="Team Slide"><span>Team</span></a>
                 </li>
             </ul>
         </nav>
     </header>
     <main class="app">
         <section id="s1" class="page" aria-hidden="true">
-            <div id="snow" aria-hidden="true"></div>
+            <div class="heroTitle"></div>
         </section>
         <section id="s2" class="page">
             <header>
                 <h2><span>History</span></h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est tempore voluptates dignissimos corporis nemo architecto delectus vero voluptatum! Asperiores commodi dolor voluptates? Accusamus beatae cum pariatur aliquid non accusantium aspernatur?</p>
             </header>
-            <div class="cont">
-                <div class="slider">
+            <div id="slider" class="cont">
+                <div class="slider-container">
                     <div id="slide0" class="slide" aria-hidden="true"></div>
                     <figure id="slide1" class="slide">
                         <img src="./images/slide1.png" alt="">
@@ -57,17 +60,21 @@
                     </figure>
                 </div>
                 <div class="slider-nav">
-                    <a href="#slide1" class="slider-navlink">
-                        <img src="./images/slide1.png" alt="">
+                    <a target="_self" class="slider-navlink">
+                        <span aria-labelledby="img1" hidden>Image 1</span>
+                        <img id="img1" src="./images/slide1.png" alt="Image 1">
                     </a>
-                    <a href="#slide2" class="slider-navlink">
-                        <img src="./images/slide2.png" alt="">
+                    <a target="_self" class="slider-navlink">
+                        <span aria-labelledby="img2" hidden>Image 2</span>
+                        <img id="img2" src="./images/slide2.png" alt="Image 2">
                     </a>
-                    <a href="#slide3" class="slider-navlink">
-                        <img src="./images/slide1.png" alt="">
+                    <a target="_self" class="slider-navlink">
+                        <span aria-labelledby="img3" hidden>Image 3</span>
+                        <img id="img3" src="./images/slide1.png" alt="Image 3">
                     </a>
-                    <a href="#slide4" class="slider-navlink">
-                        <img src="./images/slide2.png" alt="">
+                    <a target="_self" class="slider-navlink">
+                        <span aria-labelledby="img4" hidden>Image 4</span>
+                        <img id="img4" src="./images/slide2.png" alt="Image 4">
                     </a>
                 </div>
             </div>
@@ -225,7 +232,7 @@
     </main>
     <footer class="bar bottom">
         <nav>
-            <a href="#s1">
+            <a target="_self" href="#s1">
                 <img src="images/logoFooter.png" alt="logo, Los Angeles Mountains">
             </a>
             <small class="copyright">Copyright 2016. All Rights Reserved</small>
