@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background-color: gainsboro;}
+    </style>
+    <script>
+        const solution = (maze, startRow, startCol, destRow,destCol) => 
+        {
+            // let path = [];
+            // console.log({maze, startRow, startCol,destRow,destCol});
+            let state = true
+            const pos = {r:startRow,c:startCol};
+            const spot = (r,c) => maze[r][c];
+            // var s = spot(startRow,startCol);
+            console.log({pos});
+            const left = (i,j) => { return spot(i--,j);   };
+            const right = (i,j) => { return spot(i++,j);   };
+            const up = (i,j) => { return spot(i,j--);   };
+            const down = (i,j) => { return spot(i,j++);   };
+            const incRow = n => 
+            {
+                if ((pos.r + n) < 0) {return 0;}
+                else if ((pos.r + n) > maze[0].length) {return maze[0].length;}
+            }; 
+            const incCol = n => 
+            {
+                if ((pos.c + n) < 0) {return 0;}
+                else if ((pos.c + n) > maze.length) {return maze.length;}
+            }; 
+            // while(pos.r != destRow && pos.c != destCol || state == false)
+            {
+                console.log({state , pos});
+                if (!left(pos.r,pos.c)) {incRow(-1); state = true;}
+                else if (!right(pos.r,pos.c)) {incRow(1); state = true;}
+                else if (!up(pos.r,pos.c)) {incCol(-1); state = true;}
+                else if (!down(pos.r,pos.c)) {incCol(1); state = true;}
+                else {state = false}
+            }
+            // console.log(i);
+return state;
+        };
+        // solution(
+        //     [
+        //         [0,1,1,1,1],
+        //         [0,1,0,0,0],
+        //         [0,0,0,1,0],
+        //         [1,1,1,1,0],
+        //         [1,0,0,1,0]
+
+        //     ],);
+        solution([[0,1],[1,0]],0,0,1,1)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* Surprise! You probably thought you could just forget
+the line of code you just learned! Nope, not on my watch!
+
+Try to write that 1-liner of React code again! This time,
+see if you can figure out how to render an <ul> with 2+ <li>s inside*/
+ var msg = ["<h1>YO YO!</h1>"];
+ msg.push( ["<ul>", "</ul>"]);
+ for(var i=0;i<5;i++)
+ {
+    msg[1].splice(1,0,["<li class='c"+i+"'>",i,"</li"]);
+ }
+ //console.log(msg);
+ var red = msg.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+).split(",").join("");
+//console.log(red);
+ReactDOM.render(<h1>YO YO!</h1>,document.getElementById("root"));
