@@ -134,7 +134,7 @@ main {
   display: none;
 }
 
-.app > *:last-child {
+.app > *:first-child {
   display: grid;
 }
 
